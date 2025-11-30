@@ -1,0 +1,251 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ff87c6" />
+  <title>Spleo Anime - Watch Anime Online in HD</title>
+  <meta name="description" content="Spleo Anime lets you watch anime online free in full HD. Stream the newest episodes and movies with English Sub & Dub." />
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #fef6fb;
+      padding: 20px;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(to right, #ff87c6, #ffa5d8);
+      color: #fff;
+      border-radius: 12px;
+    }
+
+    header h1 { font-size: 3rem; margin-bottom: 10px; }
+    header p { font-size: 1.2rem; margin-bottom: 20px; }
+
+    #startBtn {
+      padding: 12px 25px;
+      background: white;
+      color: #ff369c;
+      border: none;
+      border-radius: 40px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    #startBtn:hover { background: #ffe1ef; }
+
+    main { max-width: 800px; margin: 40px auto; text-align: center; }
+
+    main ul li { margin: 10px 0; font-size: 1.1rem; }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+    }
+
+    .credit {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Spleo Anime</h1>
+    <p>Watch your favorite anime online in HD – Free with English Sub & Dub!</p>
+    <button id="startBtn">Start Watching</button>
+  </header>
+
+  <main>
+    <section>
+      <h2>Why Choose Spleo Anime?</h2>
+      <ul>
+        <li>✅ Latest Episodes</li>
+        <li>✅ English Sub & Dub</li>
+        <li>✅ Fast, smooth streaming</li>
+        <li>✅ No Registration Needed</li>
+        <li>💖 Enjoy all anime here (placeholders)</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Spleo Anime. All rights reserved.</p>
+    <p class="credit">Made by DIVYANSH</p>
+  </footer>
+
+  <script>
+    document.getElementById('startBtn').addEventListener('click', () => {
+      window.location.href = "anime-library.html";
+    });
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spleo Anime Library</title>
+
+<style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #fff0f7;
+    margin: 0;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff3f9f;
+  }
+
+  .search-box {
+    max-width: 500px;
+    margin: 0 auto 20px;
+    text-align: center;
+  }
+
+  .search-box input {
+    width: 90%;
+    padding: 12px;
+    border-radius: 30px;
+    border: 2px solid #ff8bcf;
+    font-size: 1rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  .card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .card-title {
+    margin-top: 10px;
+    font-weight: bold;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Anime Library</h1>
+
+<div class="search-box">
+  <input type="text" id="search" placeholder="Search anime...">
+</div>
+
+<div class="grid" id="animeGrid">
+
+  <!-- Example Anime Cards -->
+  <div class="card" onclick="openAnime('Anime 1')">
+    <img src="https://via.placeholder.com/200x280?text=Anime+1">
+    <div class="card-title">Anime 1</div>
+  </div>
+
+  <div class="card" onclick="openAnime('Anime 2')">
+    <img src="https://via.placeholder.com/200x280?text=Anime+2">
+    <div class="card-title">Anime 2</div>
+  </div>
+
+  <div class="card" onclick="openAnime('Anime 3')">
+    <img src="https://via.placeholder.com/200x280?text=Anime+3">
+    <div class="card-title">Anime 3</div>
+  </div>
+
+</div>
+
+<script>
+  function openAnime(name) {
+    // Opens video page (placeholder)
+    window.location.href = "watch.html?anime=" + encodeURIComponent(name);
+  }
+
+  // Simple Search Filter
+  document.getElementById('search').addEventListener('input', function () {
+    let query = this.value.toLowerCase();
+    let cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+      let title = card.innerText.toLowerCase();
+      card.style.display = title.includes(query) ? "block" : "none";
+    });
+  });
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Watch Anime</title>
+
+<style>
+  body {
+    font-family: 'Segoe UI';
+    background: #ffe8f5;
+    padding: 20px;
+  }
+
+  h1 {
+    text-align: center;
+    color: #ff48a6;
+  }
+
+  video {
+    display: block;
+    margin: 20px auto;
+    max-width: 90%;
+    border-radius: 12px;
+  }
+</style>
+</head>
+
+<body>
+
+<h1 id="animeTitle">Loading...</h1>
+
+<video controls>
+  <source src="your-video-file.mp4" type="video/mp4">
+</video>
+
+<script>
+  const params = new URLSearchParams(location.search);
+  document.getElementById("animeTitle").innerText = params.get("anime");
+</script>
+
+</body>
+</html>
